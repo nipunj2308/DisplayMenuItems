@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+<Preference
+    android:key="Counter_settings"
+    android:title="@string/Counters_Settings"
+    android:summary="@string/Counter_settings_summary"
+    app:useSimpleSummaryProvider="true"
+    >
+
+</Preference>
+
+    <Preference
+        key="bill_display_settings"
+        android:title="@string/invoice_sms_settings"
+        android:summary="@string/sms_settings_summary"
+        android:icon="@drawable/ic_delete_black_24dp"
+        app:useSimpleSummaryProvider="true"
+        android:fragment="com.example.itemsdatabasestartup.BillSettings">
+
+       <!-- <PreferenceScreen android:title="@string/invoice_sms_settings">
+
+            <SwitchPreference
+                android:title="@string/Enable_GST"
+                android:key="Enable_GST"></SwitchPreference>
+
+
+
+        </PreferenceScreen>-->
+
+    </Preference>
+
+    <Preference
+        android:key="categories_settings"
+        android:title="@string/Menu_categories"
+        android:summary="@string/define_categories_summary"
+        app:useSimpleSummaryProvider="true"
+        android:fragment="com.example.itemsdatabasestartup.DisplayMenuCategoriesFragment">
+
+    </Preference>
+
+    <Preference
+        android:key="menu_settings"
+        android:title="@string/Menu_items_settings"
+        android:summary="@string/menu_items_settings_summary"
+        app:useSimpleSummaryProvider="true"
+        android:fragment="com.example.itemsdatabasestartup.DisplayMenuItemsFragment">
+
+    </Preference>
+
+    <Preference
+        android:key="App_password_settings"
+        android:title="@string/Change_Password"
+        android:summary="@string/Change_password_summary"
+        app:useSimpleSummaryProvider="true">
+
+    </Preference>
+
+</PreferenceScreen>

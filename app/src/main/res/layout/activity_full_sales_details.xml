@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FullSalesDetails"
+    android:isScrollContainer="true"
+    android:measureAllChildren="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DateAndEmailButtonLayout"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        android:layout_above="@+id/SalesSummaryTable1">
+
+
+        <TextView
+            android:id="@+id/SelectedDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+
+        <Button
+            android:id="@+id/SendSalesSummaryToEmailButton"
+            android:layout_width="0dp"
+           android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Send to email"
+            android:textSize="10dp"
+            android:layout_margin="10dp"/>
+
+
+    </LinearLayout>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/DateAndEmailButtonLayout"
+        android:layout_marginTop="20dp"
+        android:id="@+id/SalesSummaryTable1"> <!-- collapse the first column of the table row-->
+
+
+    <!-- first row of the table layout-->
+    <TableRow
+        android:id="@+id/row1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:background="@drawable/table_style"
+        >
+
+        <!-- Add elements/columns in the first row-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Total Amount Collected"
+            android:textSize="16dp"
+            android:background="#FEF5E7"
+            android:textColor="#000000"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/TotalAmountCollectedValueTextView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Abcd"
+            android:gravity="center"
+            />
+
+    </TableRow>
+
+
+        <TableRow
+            android:padding="3dp"
+            android:background="@drawable/table_style">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Total GST collected"
+                android:textSize="16dp"
+                android:background="#FEF5E7"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/TotalGSTCollectedValueTextView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Abcd"
+                android:gravity="center"
+                />
+
+
+        </TableRow>
+
+        <TableRow
+            android:padding="3dp"
+            android:background="@drawable/table_style">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Total Transaction Amount Collected"
+                android:textSize="16dp"
+                android:background="#FEF5E7"
+                android:textColor="#000000"
+                android:textStyle="bold"
+               />
+
+            <TextView
+                android:id="@+id/TotalTransactionAmountCollectedValueTextView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Abcd"
+                android:gravity="center"
+               />
+
+
+        </TableRow>
+
+      <!--  <TableRow
+            android:padding="3dp"
+            android:background="@drawable/table_style">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Total Income"
+                android:textSize="16dp"
+                android:background="#FEF5E7"
+                android:textColor="#000000"
+                android:textStyle="bold"
+               />
+
+            <TextView
+                android:id="@+id/TotalIncomeValueTextView"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Abcd"
+                />
+
+
+        </TableRow>-->
+        <TableRow
+            android:padding="3dp"
+            android:background="@drawable/table_style">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Total Orders placed"
+                android:textSize="16dp"
+                android:background="#FEF5E7"
+                android:textColor="#000000"
+                android:textStyle="bold"
+               />
+
+            <TextView
+                android:id="@+id/TotalOrdersPlacedValueTextView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Abcd"
+                android:gravity="center"
+                />
+
+
+        </TableRow>
+        <TableRow
+            android:padding="3dp"
+            android:background="@drawable/table_style">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Top 3 Most popular item (most sold)"
+                android:textSize="16dp"
+                android:background="#FEF5E7"
+                android:textColor="#000000"
+                android:textStyle="bold"
+               />
+
+            <TextView
+                android:id="@+id/Top3MostPopular"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Abcd"
+                android:gravity="center"
+               />
+
+
+        </TableRow>
+        <TableRow
+            android:padding="3dp"
+            android:background="@drawable/table_style">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Top 3 Least popular item (least sold)"
+                android:textSize="16dp"
+                android:background="#FEF5E7"
+                android:textColor="#000000"
+                android:textStyle="bold"
+
+               />
+
+            <TextView
+                android:id="@+id/Least3Popular"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Abcd"
+                android:gravity="center"
+               />
+
+
+        </TableRow>
+
+
+        <TableRow
+            android:padding="3dp"
+            android:background="@drawable/table_style">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Top 3 most revenue generating items"
+                android:textSize="16dp"
+                android:background="#FEF5E7"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/Top3RevenueGeneratingItems"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Abcd"
+                android:gravity="center"
+                />
+
+
+        </TableRow>
+        <TableRow
+            android:padding="3dp"
+            android:background="@drawable/table_style">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Top 3 least revenue generating items "
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:background="#FEF5E7"
+               />
+
+            <TextView
+                android:id="@+id/Least3RevenueGeneratingItems"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Abcd"
+                android:gravity="center"
+               />
+
+
+        </TableRow>
+
+</TableLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Revenue collected by each item :"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_below="@+id/SalesSummaryTable1"
+        android:layout_marginTop="30dp"
+        android:id="@+id/TextViewItemSoldHeading"
+        android:layout_marginLeft="10dp"
+       />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/TextViewItemSoldHeading"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/ItemSoldRecyclerView"
+        android:layout_marginBottom="50dp">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>
+</androidx.core.widget.NestedScrollView>

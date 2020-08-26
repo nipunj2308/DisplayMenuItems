@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/takeOrderDetailsFragment">
+
+    <fragment
+        android:id="@+id/takeOrderDetailsFragment"
+        android:name="com.example.itemsdatabasestartup.TakeOrderDetailsFragment"
+        android:label="fragment_take_order_details"
+        tools:layout="@layout/fragment_take_order_details" >
+        <!--<action
+            android:id="@+id/action_takeOrderDetailsFragment_to_trackOrdersSMSActivity"
+            app:destination="@id/trackOrdersSMSActivity"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>-->
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.itemsdatabasestartup.SettingsFragment2"
+        android:label="fragment_settings_fragment2"
+        tools:layout="@layout/fragment_settings_fragment2" >
+        <action
+            android:id="@+id/action_settingsFragment_to_billSettings"
+            app:destination="@id/billSettings2" />
+
+        <action
+            android:id="@+id/action_settingsFragment_to_categorySettingsFragment"
+            app:destination="@id/categorySettingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_displayMenuItemsFragment"
+            app:destination="@+id/displayMenuItemsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/billSettings2"
+        android:name="com.example.itemsdatabasestartup.BillSettings"
+        android:label="fragment_bill_settings"
+        tools:layout="@layout/fragment_bill_settings" />
+    <fragment
+        android:id="@+id/categorySettingsFragment"
+        android:name="com.example.itemsdatabasestartup.CategorySettingsFragment"
+        android:label="fragment_category_settings"
+        tools:layout="@layout/fragment_category_settings" />
+    <fragment
+        android:id="@+id/displayMenuItemsFragment"
+        android:name="com.example.itemsdatabasestartup.DisplayMenuItemsFragment"
+        android:label="fragment_display_menu_items"
+        tools:layout="@layout/fragment_display_menu_items" />
+    <fragment
+        android:id="@+id/orderAndsalesSummary"
+        android:name="com.example.itemsdatabasestartup.OrderAndsalesSummary"
+        android:label="fragment_order_andsales_summary"
+        tools:layout="@layout/fragment_order_andsales_summary" >
+        <action
+            android:id="@+id/action_orderAndsalesSummary_to_salesSumary"
+            app:destination="@id/salesSumary" />
+        <action
+            android:id="@+id/action_orderAndsalesSummary_to_ordersListSummary"
+            app:destination="@id/ordersListSummary" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersListSummary"
+        android:name="com.example.itemsdatabasestartup.OrdersListSummary"
+        android:label="fragment_orders_list_summary"
+        tools:layout="@layout/fragment_orders_list_summary" />
+    <fragment
+        android:id="@+id/salesSumary"
+        android:name="com.example.itemsdatabasestartup.SalesSumary"
+        android:label="fragment_sales_sumary"
+        tools:layout="@layout/fragment_sales_sumary" />
+   <!-- <activity
+        android:id="@+id/trackOrdersSMSActivity"
+        android:name="com.example.itemsdatabasestartup.TrackOrdersSMSActivity"
+        android:label="activity_track_orders_sms"
+        tools:layout="@layout/activity_track_orders_sms" />-->
+</navigation>

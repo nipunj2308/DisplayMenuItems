@@ -6,11 +6,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DisplayCategoryArray">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!--<TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/DisplayId"
+        android:textSize="25dp"/>-->
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/DisplayCategoriesArrayTextView"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:id="@+id/DisplayItemNameArray"
         android:textSize="25dp"/>
+
+        <!--<TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/DisplayPriceArray"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/DisplayCounterArray"
+            android:textSize="25dp"/>-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:id="@+id/DisplayCategoryArray"
+            android:textSize="25dp"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

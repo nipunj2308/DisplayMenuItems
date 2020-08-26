@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,6 +24,7 @@ public class DefineCategoriesRecyclerAdapter extends RecyclerView.Adapter<Define
 public final ArrayList<ModelClassForCategories> categories;
 private SQLiteHelper sqLiteHelper;
  private SQLiteDatabase sqLiteDatabase;
+ Context context;
 
 public DefineCategoriesRecyclerAdapter(ArrayList<ModelClassForCategories> categories)
 {
@@ -33,7 +35,7 @@ public DefineCategoriesRecyclerAdapter(ArrayList<ModelClassForCategories> catego
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        Context context = parent.getContext();
+    context = parent.getContext();
         sqLiteHelper = new SQLiteHelper(context);
         sqLiteDatabase = sqLiteHelper.getWritableDatabase();
 
@@ -74,7 +76,15 @@ public DefineCategoriesRecyclerAdapter(ArrayList<ModelClassForCategories> catego
                @Override
                public void onClick(View view) {
                    // check if the code is working or not before using
-                   sqLiteHelper.DeleteCategory(categories.get(getAdapterPosition()).getCategoryName());
+                   int deletedRows = sqLiteHelper.DeleteCategory(categories.get(getAdapterPosition()).getCategoryName());
+                   if (deletedRows == 0)
+                   {
+                       Toast.makeText(context, "Unsuccesful..", Toast.LENGTH_SHORT).show();
+                   }
+                   else
+                   {
+                       Toast.makeText(context, categories.get(getAdapterPosition()).getCategoryName()+"deleted, "+deletedRows+" rows affected", Toast.LENGTH_SHORT).show();
+                   }
                    categories.remove(getAdapterPosition());
                    notifyDataSetChanged();
                }

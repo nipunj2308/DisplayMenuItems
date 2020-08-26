@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DefineMenuItems">
+    tools:context=".DisplayMenuItemsFragment"
+    >
 // https://stackoverflow.com/questions/3285412/whats-the-best-way-to-limit-text-length-of-edittext-in-android
     //for numberDecimal input type https://stackoverflow.com/questions/11921610/android-inputtype-numberdecimal-brings-up-keyboard-without-commas
    <!--LinearLayout
@@ -22,25 +23,55 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent">-->
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/MenuItemsSettingsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:theme="@style/AppTheme.NoActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/colorPrimary">
+        //android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        //android:background="@color/colorPrimary"
+
+        <TextView
+            android:id="@+id/ToolbarHeadingtextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="start"
+            android:text="Menu Items Settings"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
     <TextView
         android:id="@+id/AddMenuItemsTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="ADD MENU ITEMS"
         android:textSize="20dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ItemDetailsLinearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/MenuItemsSettingsToolbar" />
 
     <LinearLayout
         android:id="@+id/ItemDetailsLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AddMenuItemsTextView">
@@ -80,12 +111,11 @@
             android:inputType="number"
             android:maxLength="2" />
 
-       <Spinner
+        <Spinner
             android:id="@+id/CategoriesSpinner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"></Spinner>
-
 
 
     </LinearLayout>
@@ -134,10 +164,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/MenuItemsDisplayRecylerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MenuItemsTextView">

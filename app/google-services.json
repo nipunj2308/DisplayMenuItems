@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "718977667655",
+    "firebase_url": "https://heedistpointofsale.firebaseio.com",
+    "project_id": "heedistpointofsale",
+    "storage_bucket": "heedistpointofsale.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718977667655:android:af03f0087a0e32d89b1762",
+        "android_client_info": {
+          "package_name": "com.example.itemsdatabasestartup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718977667655-v7us6ta9sfm2e61hicu99nfpica3fdgc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.itemsdatabasestartup",
+            "certificate_hash": "ae2465d9e8d55f1c126887b0da1cbe6cdf8d9087"
+          }
+        },
+        {
+          "client_id": "718977667655-kpnup8107jo92pvhkeod77t6p21c36rd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkY30nn9sLroWqefCcU6i--jUMNMJPOa0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718977667655-kpnup8107jo92pvhkeod77t6p21c36rd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

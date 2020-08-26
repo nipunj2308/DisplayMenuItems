@@ -25,6 +25,14 @@ public class ModelClassForItemDetails
 
     }
 
+    public ModelClassForItemDetails(int ID, String itemName, float Price)
+    {
+
+        this.ID = ID;
+        this.ItemName = itemName;
+        this.Price = Price;
+    }
+
     public boolean isExpanded() {
         return Expanded;
     }

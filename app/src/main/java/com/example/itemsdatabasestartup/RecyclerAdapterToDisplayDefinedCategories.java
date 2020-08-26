@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -73,12 +74,26 @@ public class RecyclerAdapterToDisplayDefinedCategories extends RecyclerView.Adap
                 @Override
                 public void onClick(View view) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                    builder.setMessage(" Are you sure you want to delete category??")
+                    builder.setMessage(" Are you sure you want to delete category "+categories.get(getAdapterPosition())+" ??")
                             .setPositiveButton("yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             //sqLiteHelper.DeleteCategory()
-                            sqLiteHelper.DeleteCategory(String.valueOf(categories.get(getAdapterPosition())));
+                            int updatetedRows = sqLiteHelper.DeleteCategory(String.valueOf(categories.get(getAdapterPosition())));
+
+
+                            if (updatetedRows == -1)
+                            {
+                                Toast.makeText(context, "Category deleted, No rows affected", Toast.LENGTH_SHORT).show();
+                            }
+                            else if (updatetedRows == 0)
+                            {
+                                Toast.makeText(context,"unsuccessful",Toast.LENGTH_SHORT).show();
+                            }
+                            else
+                            {
+                                Toast.makeText(context, categories.get(getAdapterPosition())+" category deleted, "+updatetedRows+" rows affected", Toast.LENGTH_SHORT).show();
+                            }
                             categories.remove(getAdapterPosition());
                             notifyDataSetChanged();
 

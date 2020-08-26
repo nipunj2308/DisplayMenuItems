@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">ItemsDatabaseStartup</string>
+
+    <string name="invoice_sms_settings">Invoice SMS settings</string>
+    <string name="Counters_Settings">Counter Settings</string>
+    <string name="Change_Password">Change Password</string>
+    <string name="Menu_categories">Item Categories settings</string>
+    <string name="Menu_items_settings">Menu Items Settings</string>
+
+    <string name="bottom_navigation_store_icon">store</string>
+    <string name="bottom_navigation_world">world</string>
+
+    <string name="bottom_navigation_summary">summary</string>
+    <string name="bottom_navigation_settings">settings</string>
+
+    <string name="Counter_settings_summary">View Counter Details</string>
+    <string name="Change_password_summary">Change Application Password</string>
+    <string name="define_categories_summary">View Categories defined</string>
+    <string name="menu_items_settings_summary">View Menu Items</string>
+
+    <string name="sms_settings_summary">Customize Bill SMS </string>
+
+
+    <string name="Enable_GST">Enable GST</string>
+    <string name="Name">Name</string>
+    <string name="Location">Location</string>
+    <string name="Date_and_Time">Date and Time</string>
+    <string name="Order_Details">Order Details</string>
+    <string name="Greetings_Text">Greetings Text</string>
+    <string name="Greetings_EditText">Greetings EditText</string>
+    <string name="Counter_and_order_details">Counter and Order Details</string>
+    <string name="Order_preparation_Notification">Order Preparation Notification</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="Status_preparing">preparing</string>
+    <string name="Status_prepared">Prepared</string>
+    <string name="Status_delivered">Delivered</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

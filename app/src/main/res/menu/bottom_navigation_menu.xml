@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/takeOrderDetailsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_store_black_24dp"
+        android:title="@string/bottom_navigation_store_icon"
+        android:visible="true" />
+    <item
+
+        android:id="@+id/worldFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_public_black_24dp"
+        android:title="@string/bottom_navigation_world"
+        android:visible="true" />
+    <item
+
+        android:id="@+id/orderAndsalesSummary"
+        android:enabled="true"
+        android:icon="@drawable/ic_description_24dp"
+        android:title="@string/bottom_navigation_summary"
+        android:visible="true" />
+
+    <item
+
+        android:id="@+id/TransactionFragment"
+        android:enabled="true"
+        android:icon="@drawable/rupee_indian"
+        android:title="@string/bottom_navigation_summary"
+        android:viewportHeight="24.0"
+        android:width="24dp"
+        android:visible="true" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="@string/bottom_navigation_settings"
+        android:visible="true" />
+</menu>

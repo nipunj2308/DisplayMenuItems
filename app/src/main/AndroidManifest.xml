@@ -12,20 +12,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DefineMenuItems">
-
+        <activity android:name=".TrackOrdersActivity"></activity>
+        <activity android:name=".TrackOrdersSMSActivity" />
+        <activity android:name=".SubletBaseActivity" />
+        <activity android:name=".FullOrdersListSummary" />
+        <activity android:name=".FullSalesDetails" />
+        <activity android:name=".AppStartupSplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DefineCategories">
-
-        </activity>
-        <activity android:name=".DisplayCategoryArray" >
-
-        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".BillDisplayAndGeneration" />
+        <activity
+            android:name=".BaseActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".TakeOrdersActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ViewDatabaseEntries" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".Settings" />
+        <activity android:name=".DefineMenuItems" />
+        <activity android:name=".DefineCategories" />
+        <activity android:name=".DisplayCategoryArray" />
         <activity android:name=".MainActivity">
 
             <!--

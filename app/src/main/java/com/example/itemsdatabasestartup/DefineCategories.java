@@ -36,6 +36,7 @@ public class DefineCategories extends AppCompatActivity {
         CategoryName = findViewById(R.id.defineCategoryName);
         recyclerView = findViewById(R.id.DisplayCategoriesRecyclerView);
         AddCategoryToDatabase = findViewById(R.id.AddCategory);
+        DisplayCategory();
         recyclerAdapterToDisplayDefinedCategories = new RecyclerAdapterToDisplayDefinedCategories(categoryNames);
         recyclerView.setAdapter(recyclerAdapterToDisplayDefinedCategories);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -68,7 +69,7 @@ public class DefineCategories extends AppCompatActivity {
             }
         });
 
-           DisplayCategory();
+
 
     }
 

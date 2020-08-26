@@ -62,7 +62,7 @@ public class DefineMenuItems extends AppCompatActivity implements AdapterView.On
         itemCounter = findViewById(R.id.itemCounterEdiText);
         AddItemDetails = findViewById(R.id.AddItemDetailsButton);
         recyclerView = findViewById(R.id.MenuItemsDisplayRecylerView);
-        sqLiteHelper = new SQLiteHelper(this);
+
 
 
        /* ItemNames = new ArrayList<>();
@@ -200,7 +200,6 @@ public class DefineMenuItems extends AppCompatActivity implements AdapterView.On
             }
         }
      return  itemDetails;
-
 
     }
 
